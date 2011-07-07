@@ -20,14 +20,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ###
 
-class Request
+class XbmcRequest
 	constructor: (options) ->
 		xhr = new XMLHttpRequest()
-		xhr.open options.method, options.url, true, options.username or null, options.password or null
 
-		xhr.send options.data or null
+		xhr.open "POST", "http://#{ options.settings.host }/jsonrpc", true, options.settings.username, options.settings.password
+
+		postData
+			jsonrpc: "2.0"
+			method: options.method
+			params: options.params
+			id: 1
+
+		xhr.send JSON.stringify postData
 
 		if options.callback?
 			xhr.onreadystatechange ->
 				if xhr.readyState is 4
-					options.callback xhr
+					options.callback JSON.parse(xhr.responseText).request[options.responseField]

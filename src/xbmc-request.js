@@ -19,21 +19,27 @@
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
-  */  var Request;
-  Request = (function() {
-    function Request(options) {
+  */  var XbmcRequest;
+  XbmcRequest = (function() {
+    function XbmcRequest(options) {
       var xhr;
       xhr = new XMLHttpRequest();
-      xhr.open(options.method, options.url, true, options.username || null, options.password || null);
-      xhr.send(options.data || null);
+      xhr.open("POST", "http://" + options.settings.host + "/jsonrpc", true, options.settings.username, options.settings.password);
+      postData({
+        jsonrpc: "2.0",
+        method: options.method,
+        params: options.params,
+        id: 1
+      });
+      xhr.send(JSON.stringify(postData));
       if (options.callback != null) {
         xhr.onreadystatechange(function() {
           if (xhr.readyState === 4) {
-            return options.callback(xhr);
+            return options.callback(JSON.parse(xhr.responseText).request[options.responseField]);
           }
         });
       }
     }
-    return Request;
+    return XbmcRequest;
   })();
 }).call(this);
