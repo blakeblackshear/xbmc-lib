@@ -25,7 +25,7 @@
       this.settings = settings;
     }
     VideoLibrary.prototype.getMovies = function(params, callback) {
-      return new Request({
+      return new XbmcRequest({
         settings: this.settings,
         method: "VideoLibrary.GetMovies",
         params: params,
@@ -34,7 +34,7 @@
       });
     };
     VideoLibrary.prototype.getTvShows = function(params, callback) {
-      return new Request({
+      return new XbmcRequest({
         settings: this.settings,
         method: "VideoLibrary.GetTVShows",
         params: params,
@@ -43,7 +43,7 @@
       });
     };
     VideoLibrary.prototype.getSeasons = function(params, callback) {
-      return new Request({
+      return new XbmcRequest({
         settings: this.settings,
         method: "VideoLibrary.GetSeasons",
         params: params,
@@ -52,7 +52,7 @@
       });
     };
     VideoLibrary.prototype.getEpisodes = function(params, callback) {
-      return new Request({
+      return new XbmcRequest({
         settings: this.settings,
         method: "VideoLibrary.GetEpisodes",
         params: params,
