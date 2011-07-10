@@ -1,7 +1,7 @@
 class window.XbmcRequest
 	constructor: (options) ->
 		xhr = new XMLHttpRequest()
-		host = options.settings.host or ""
+		host = if options.settings.host? then "http://#{ options.settings.host }" else ""
 		xhr.open "POST", "#{ host }/jsonrpc", true, options.settings.username, options.settings.password
 
 		postData =

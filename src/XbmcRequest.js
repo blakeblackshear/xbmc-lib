@@ -3,7 +3,7 @@
     function XbmcRequest(options) {
       var host, postData, xhr;
       xhr = new XMLHttpRequest();
-      host = options.settings.host || "";
+      host = options.settings.host != null ? "http://" + options.settings.host : "";
       xhr.open("POST", "" + host + "/jsonrpc", true, options.settings.username, options.settings.password);
       postData = {
         jsonrpc: "2.0",
