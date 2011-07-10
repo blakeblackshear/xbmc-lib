@@ -14,6 +14,15 @@
           break;
         case "VideoLibrary.GetEpisodes":
           options.callback(this.mockepisodes);
+          break;
+        case "AudioLibrary.GetArtists":
+          options.callback(this.mockartists);
+          break;
+        case "AudioLibrary.GetAlbums":
+          options.callback(this.mockalbums);
+          break;
+        case "AudioLibrary.GetSongs":
+          options.callback(this.mocksongs);
       }
     }
     XbmcRequest.prototype.mockmovies = [
@@ -190,6 +199,259 @@
         "file": "C:\\Users\\Blake\\Videos\\Fake TV Shows\\24\\24 107.flv",
         "label": "Day 1 - 6:00 A.M.-7:00 A.M.",
         "thumbnail": "special://masterprofile/Thumbnails/Video/0/0438faa7.tbn"
+      }
+    ];
+    XbmcRequest.prototype.mockartists = [
+      {
+        "artistid": 1,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/e9484552.tbn",
+        "label": "Band of Horses"
+      }, {
+        "artistid": 2,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "label": "Brian Regan"
+      }, {
+        "artistid": 3,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/f2494f01.tbn",
+        "label": "Cake"
+      }
+    ];
+    XbmcRequest.prototype.mockalbums = [
+      {
+        "album_artist": "Band of Horses",
+        "album_genre": "Alternative",
+        "albumid": 1,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/e9484552.tbn",
+        "label": "Cease to Begin",
+        "thumbnail": "special://masterprofile/Thumbnails/Music/e/e3fc31b8.tbn",
+        "year": 2007
+      }, {
+        "album_artist": "Brian Regan",
+        "album_genre": "Comedy",
+        "albumid": 2,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "label": "Live",
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn",
+        "year": 1997
+      }, {
+        "album_artist": "Cake",
+        "album_genre": "Pop",
+        "albumid": 3,
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/f2494f01.tbn",
+        "label": "Prolonging the Magic",
+        "thumbnail": "special://masterprofile/Thumbnails/Music/5/5230f5bb.tbn",
+        "year": 1998
+      }
+    ];
+    XbmcRequest.prototype.mocksongs = [
+      {
+        "album": "Cease to Begin",
+        "artist": "Band of Horses",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/e9484552.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Band of Horses\\Cease to Begin\\Band of Horses-The General Specific.mp3",
+        "label": "The General Specific",
+        "songid": 1,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/e/e3fc31b8.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Animals.mp3",
+        "label": "Animals",
+        "songid": 2,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Belly Buttons.mp3",
+        "label": "Belly Buttons",
+        "songid": 3,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Big Family Stuff.mp3",
+        "label": "Big Family Stuff",
+        "songid": 4,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Blasting Zone.mp3",
+        "label": "Blasting Zone",
+        "songid": 5,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Crank Calls.mp3",
+        "label": "Crank Calls",
+        "songid": 6,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Dog Barking.mp3",
+        "label": "Dog Barking",
+        "songid": 7,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Donut Lady.mp3",
+        "label": "Donut Lady",
+        "songid": 8,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Elevators & Faces.mp3",
+        "label": "Elevators & Faces",
+        "songid": 9,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Evel Knievel.mp3",
+        "label": "Evel Knievel",
+        "songid": 10,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Fishing on T.V.mp3",
+        "label": "Fishing on T.V.",
+        "songid": 11,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Flipper & Gentle Ben.mp3",
+        "label": "Flipper & Gentle Ben",
+        "songid": 12,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Health Club Stuff.mp3",
+        "label": "Health Club Stuff",
+        "songid": 13,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Hooked on Phonix.mp3",
+        "label": "Hooked on Phonix",
+        "songid": 14,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Horns & Windsheilds.mp3",
+        "label": "Horns & Windsheilds",
+        "songid": 15,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Kid's Party Games.mp3",
+        "label": "Kid's Party Games",
+        "songid": 16,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Log Trucks.mp3",
+        "label": "Log Trucks",
+        "songid": 17,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Lousy in Little League.mp3",
+        "label": "Lousy in Little League",
+        "songid": 18,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Monster Truck Drivers.mp3",
+        "label": "Monster Truck Drivers",
+        "songid": 19,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Peanut Butter & Jelly.mp3",
+        "label": "Peanut Butter & Jelly",
+        "songid": 20,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Seatbelts.mp3",
+        "label": "Seatbelts",
+        "songid": 21,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Spider Webs & Bees.mp3",
+        "label": "Spider Webs & Bees",
+        "songid": 22,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Stupid in School.mp3",
+        "label": "Stupid in School",
+        "songid": 23,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-Whale Noises.mp3",
+        "label": "Whale Noises",
+        "songid": 24,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Live",
+        "artist": "Brian Regan",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/a6bae827.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Brian Regan\\Live\\Brian Regan-You Too & Stuff.mp3",
+        "label": "You Too & Stuff",
+        "songid": 25,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/c/c0b7c84c.tbn"
+      }, {
+        "album": "Prolonging the Magic",
+        "artist": "Cake",
+        "fanart": "special://masterprofile/Thumbnails/Music/Fanart/f2494f01.tbn",
+        "file": "C:\\Users\\Blake\\Music\\Cake\\Prolonging the Magic\\Cake-Sheep Go to Heaven.mp3",
+        "label": "Sheep Go to Heaven",
+        "songid": 26,
+        "thumbnail": "special://masterprofile/Thumbnails/Music/5/5230f5bb.tbn"
       }
     ];
     return XbmcRequest;
