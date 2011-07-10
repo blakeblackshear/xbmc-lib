@@ -10,7 +10,7 @@
       artists = null;
       done = false;
       audioLibrary.getArtists({}, function(data) {
-        artists = data;
+        artists = data.artists;
         return done = true;
       });
       waitsFor(function() {
@@ -25,7 +25,7 @@
       albums = null;
       done = false;
       audioLibrary.getAlbums({}, function(data) {
-        albums = data;
+        albums = data.albums;
         return done = true;
       });
       waitsFor(function() {
@@ -40,7 +40,7 @@
       songs = null;
       done = false;
       audioLibrary.getSongs({}, function(data) {
-        songs = data;
+        songs = data.songs;
         return done = true;
       });
       waitsFor(function() {

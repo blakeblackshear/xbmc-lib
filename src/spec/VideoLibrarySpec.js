@@ -12,7 +12,7 @@
       videoLibrary.getMovies({
         "fields": ["year", "genre"]
       }, function(data) {
-        movies = data;
+        movies = data.movies;
         return done = true;
       });
       waitsFor(function() {
@@ -35,7 +35,7 @@
       tvshows = null;
       done = false;
       videoLibrary.getTvShows({}, function(data) {
-        tvshows = data;
+        tvshows = data.tvshows;
         return done = true;
       });
       waitsFor(function() {
@@ -50,7 +50,7 @@
       seasons = null;
       done = false;
       videoLibrary.getSeasons({}, function(data) {
-        seasons = data;
+        seasons = data.seasons;
         return done = true;
       });
       waitsFor(function() {
@@ -65,7 +65,7 @@
       episodes = null;
       done = false;
       videoLibrary.getEpisodes({}, function(data) {
-        episodes = data;
+        episodes = data.episodes;
         return done = true;
       });
       waitsFor(function() {

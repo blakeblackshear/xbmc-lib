@@ -15,4 +15,4 @@ class window.XbmcRequest
 		if options.callback?
 			xhr.onreadystatechange ->
 				if xhr.readyState is 4
-					options.callback JSON.parse(xhr.responseText).request[options.responseField]
+					options.callback JSON.parse(xhr.responseText).request

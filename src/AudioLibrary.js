@@ -8,7 +8,6 @@
         settings: this.settings,
         method: "AudioLibrary.GetArtists",
         params: params,
-        responseField: "artists",
         callback: callback
       });
     };
@@ -17,7 +16,6 @@
         settings: this.settings,
         method: "AudioLibrary.GetAlbums",
         params: params,
-        responseField: "albums",
         callback: callback
       });
     };
@@ -26,7 +24,6 @@
         settings: this.settings,
         method: "AudioLibrary.GetSongs",
         params: params,
-        responseField: "songs",
         callback: callback
       });
     };

@@ -8,7 +8,7 @@ describe "Audio Library", ->
 		artists = null
 		done = no
 		audioLibrary.getArtists {}, (data) ->
-			artists = data
+			artists = data.artists
 			done = yes
 		waitsFor ->
 			done
@@ -19,7 +19,7 @@ describe "Audio Library", ->
 		albums = null
 		done = no
 		audioLibrary.getAlbums {}, (data) ->
-			albums = data
+			albums = data.albums
 			done = yes
 		waitsFor ->
 			done
@@ -30,7 +30,7 @@ describe "Audio Library", ->
 		songs = null
 		done = no
 		audioLibrary.getSongs {}, (data) ->
-			songs = data
+			songs = data.songs
 			done = yes
 		waitsFor ->
 			done

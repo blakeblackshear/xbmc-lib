@@ -9,7 +9,7 @@ describe "VideoLibrary", ->
 			"fields": ["year", "genre"]
 			,
 			(data) ->
-				movies = data
+				movies = data.movies
 				done = yes
 		waitsFor ->
 			done
@@ -22,7 +22,7 @@ describe "VideoLibrary", ->
 		tvshows = null
 		done = no
 		videoLibrary.getTvShows {}, (data) ->
-			tvshows = data
+			tvshows = data.tvshows
 			done = yes
 		waitsFor ->
 			done
@@ -32,7 +32,7 @@ describe "VideoLibrary", ->
 		seasons = null
 		done = no
 		videoLibrary.getSeasons {}, (data) ->
-			seasons = data
+			seasons = data.seasons
 			done = yes
 		waitsFor ->
 			done
@@ -42,7 +42,7 @@ describe "VideoLibrary", ->
 		episodes = null
 		done = no
 		videoLibrary.getEpisodes {}, (data) ->
-			episodes = data
+			episodes = data.episodes
 			done = yes
 		waitsFor ->
 			done

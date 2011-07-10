@@ -15,7 +15,7 @@
       if (options.callback != null) {
         xhr.onreadystatechange(function() {
           if (xhr.readyState === 4) {
-            return options.callback(JSON.parse(xhr.responseText).request[options.responseField]);
+            return options.callback(JSON.parse(xhr.responseText).request);
           }
         });
       }
