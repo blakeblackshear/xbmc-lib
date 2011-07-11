@@ -7,7 +7,8 @@ class XbmcRequest
 			when "VideoLibrary.GetEpisodes" then options.callback @mockepisodes
 			when "AudioLibrary.GetArtists" then options.callback @mockartists
 			when "AudioLibrary.GetAlbums" then options.callback @mockalbums
-			when "AudioLibrary.GetSongs" then options.callback @mocksongs
+			when "AudioLibrary.GetSongs" then options.callback @mocksongs else options.callback {}
+
 	mockmovies:
                 movies:[
                         "fanart": "special://masterprofile/Thumbnails/Video/Fanart/a5fead17.tbn"

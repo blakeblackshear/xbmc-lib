@@ -23,6 +23,9 @@
           break;
         case "AudioLibrary.GetSongs":
           options.callback(this.mocksongs);
+          break;
+        default:
+          options.callback({});
       }
     }
     XbmcRequest.prototype.mockmovies = {
