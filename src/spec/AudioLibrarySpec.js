@@ -3,7 +3,7 @@
     var audioLibrary;
     audioLibrary = null;
     beforeEach(function() {
-      return audioLibrary = new AudioLibrary();
+      return audioLibrary = new xbmc.lib.AudioLibrary();
     });
     it("should be able to get artists", function() {
       var artists, done;

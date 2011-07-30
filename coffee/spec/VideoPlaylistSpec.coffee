@@ -16,7 +16,7 @@ describe "VideoPlaylist", ->
 			expect(results).not.toBeNull()
 
 	beforeEach ->
-		videoPlaylist = new VideoPlaylist()
+		videoPlaylist = new xbmc.lib.VideoPlaylist()
 
 	it "can add an item", ->
 		results = null

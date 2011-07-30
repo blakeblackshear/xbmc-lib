@@ -1,7 +1,7 @@
 describe "VideoLibrary", ->
 	videoLibrary = null
 	beforeEach ->
-		videoLibrary = new VideoLibrary({})
+		videoLibrary = new xbmc.lib.VideoLibrary({})
 	it "should be able to get movies", ->
 		movies = null
 		done = no

@@ -18,7 +18,7 @@
       });
     };
     beforeEach(function() {
-      return audioPlaylist = new AudioPlaylist();
+      return audioPlaylist = new xbmc.lib.AudioPlaylist();
     });
     it("can add an item", function() {
       var done, results;

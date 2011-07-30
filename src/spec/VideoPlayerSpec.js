@@ -18,7 +18,7 @@
       });
     };
     beforeEach(function() {
-      return videoPlayer = new VideoPlayer();
+      return videoPlayer = new xbmc.lib.VideoPlayer();
     });
     it("can take a big skip backward", function() {
       return makeCall("bigSkipBackward", {});

@@ -18,7 +18,7 @@
       });
     };
     beforeEach(function() {
-      return input = new Input();
+      return input = new xbmc.lib.Input();
     });
     it("can go back", function() {
       return makeCall("back");

@@ -7,11 +7,13 @@
     child.__super__ = parent.prototype;
     return child;
   };
-  window.VideoPlaylist = (function() {
-    __extends(VideoPlaylist, Playlist);
-    function VideoPlaylist(settings) {
-      VideoPlaylist.__super__.constructor.call(this, settings, "Video");
-    }
-    return VideoPlaylist;
-  })();
+  namespace("xbmc.lib", function(exports) {
+    return exports.VideoPlaylist = (function() {
+      __extends(VideoPlaylist, xbmc.lib.Playlist);
+      function VideoPlaylist(settings) {
+        VideoPlaylist.__super__.constructor.call(this, settings, "Video");
+      }
+      return VideoPlaylist;
+    })();
+  });
 }).call(this);

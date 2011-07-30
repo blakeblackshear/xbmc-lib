@@ -2,7 +2,7 @@ describe "Audio Library", ->
 	audioLibrary = null
 
 	beforeEach ->
-		audioLibrary = new AudioLibrary()
+		audioLibrary = new xbmc.lib.AudioLibrary()
 
 	it "should be able to get artists", ->
 		artists = null

@@ -16,7 +16,7 @@ describe "Input", ->
 			expect(results).not.toBeNull()
 
 	beforeEach ->
-		input = new Input()
+		input = new xbmc.lib.Input()
 	
 	it "can go back", ->
 		makeCall "back"

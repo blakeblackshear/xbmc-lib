@@ -18,7 +18,7 @@
       });
     };
     beforeEach(function() {
-      return videoPlaylist = new VideoPlaylist();
+      return videoPlaylist = new xbmc.lib.VideoPlaylist();
     });
     it("can add an item", function() {
       var done, results;

@@ -16,7 +16,7 @@ describe "AudioPlaylist", ->
 			expect(results).not.toBeNull()
 
 	beforeEach ->
-		audioPlaylist = new AudioPlaylist()
+		audioPlaylist = new xbmc.lib.AudioPlaylist()
 
 	it "can add an item", ->
 		results = null

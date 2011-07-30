@@ -1,15 +1,15 @@
 (function() {
   describe("Xbmc", function() {
-    var xbmc;
-    xbmc = null;
+    var xbmcTest;
+    xbmcTest = null;
     beforeEach(function() {
-      return xbmc = new Xbmc();
+      return xbmcTest = new xbmc.lib.Xbmc();
     });
     it("can get volume", function() {
       var done, results;
       results = null;
       done = false;
-      xbmc.getVolume(function(data) {
+      xbmcTest.getVolume(function(data) {
         done = true;
         return results = data;
       });
@@ -24,7 +24,7 @@
       var done, results;
       results = null;
       done = false;
-      xbmc.setVolume(63, function(data) {
+      xbmcTest.setVolume(63, function(data) {
         done = true;
         return results = data;
       });

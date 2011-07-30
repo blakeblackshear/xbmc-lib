@@ -3,7 +3,7 @@
     var videoLibrary;
     videoLibrary = null;
     beforeEach(function() {
-      return videoLibrary = new VideoLibrary({});
+      return videoLibrary = new xbmc.lib.VideoLibrary({});
     });
     it("should be able to get movies", function() {
       var done, movies;

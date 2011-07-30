@@ -16,7 +16,7 @@ describe "VideoPlayer", ->
 			expect(results).not.toBeNull()
 
 	beforeEach ->
-		videoPlayer = new VideoPlayer()
+		videoPlayer = new xbmc.lib.VideoPlayer()
 
 	it "can take a big skip backward", ->
 		makeCall "bigSkipBackward", {}

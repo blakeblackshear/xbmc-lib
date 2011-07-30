@@ -18,7 +18,7 @@
       });
     };
     beforeEach(function() {
-      return audioPlayer = new AudioPlayer();
+      return audioPlayer = new xbmc.lib.AudioPlayer();
     });
     it("can take a big skip backward", function() {
       return makeCall("bigSkipBackward", {});

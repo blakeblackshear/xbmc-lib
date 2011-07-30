@@ -1,14 +1,14 @@
 describe "Xbmc", ->
-	xbmc = null
+	xbmcTest = null
 
 	beforeEach ->
-		xbmc = new Xbmc()
+		xbmcTest = new xbmc.lib.Xbmc()
 	
 	it "can get volume", ->
 		results = null
 		done = no
 
-		xbmc.getVolume (data) ->
+		xbmcTest.getVolume (data) ->
 			done = yes
 			results = data
 		
@@ -22,7 +22,7 @@ describe "Xbmc", ->
 		results = null
 		done = no
 
-		xbmc.setVolume 63, (data) ->
+		xbmcTest.setVolume 63, (data) ->
 			done = yes
 			results = data
 

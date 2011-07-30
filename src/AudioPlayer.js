@@ -7,11 +7,13 @@
     child.__super__ = parent.prototype;
     return child;
   };
-  window.AudioPlayer = (function() {
-    __extends(AudioPlayer, Player);
-    function AudioPlayer(settings) {
-      AudioPlayer.__super__.constructor.call(this, settings, "Audio");
-    }
-    return AudioPlayer;
-  })();
+  namespace("xbmc.lib", function(exports) {
+    return exports.AudioPlayer = (function() {
+      __extends(AudioPlayer, xbmc.lib.Player);
+      function AudioPlayer(settings) {
+        AudioPlayer.__super__.constructor.call(this, settings, "Audio");
+      }
+      return AudioPlayer;
+    })();
+  });
 }).call(this);

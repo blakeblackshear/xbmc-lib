@@ -1,3 +1,4 @@
-class window.AudioPlayer extends Player
-	constructor: (settings) ->
-		super settings, "Audio"
+namespace "xbmc.lib", (exports) ->
+	class exports.AudioPlayer extends xbmc.lib.Player
+		constructor: (settings) ->
+			super settings, "Audio"

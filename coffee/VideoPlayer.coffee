@@ -1,3 +1,4 @@
-class window.VideoPlayer extends Player
-	constructor: (settings) ->
-		super settings, "Video"
+namespace "xbmc.lib", (exports) ->
+	class exports.VideoPlayer extends xbmc.lib.Player
+		constructor: (settings) ->
+			super settings, "Video"

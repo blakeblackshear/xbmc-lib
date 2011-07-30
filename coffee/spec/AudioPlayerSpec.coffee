@@ -16,7 +16,7 @@ describe "AudioPlayer", ->
 			expect(results).not.toBeNull()
 
 	beforeEach ->
-		audioPlayer = new AudioPlayer()
+		audioPlayer = new xbmc.lib.AudioPlayer()
 
 	it "can take a big skip backward", ->
 		makeCall "bigSkipBackward", {}
