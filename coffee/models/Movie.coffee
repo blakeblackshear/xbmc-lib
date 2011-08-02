@@ -12,10 +12,11 @@ namespace "xbmc.models", (exports) ->
 				(data) =>
 					for movie in data.movies
 						m = @.init
-								id: movie.id
-								title: movie.title
-								year: movie.year
-								thumb: movie.thumb
-								file: movie.file
+							id: movie.id
+							title: movie.title
+							year: movie.year
+							thumb: movie.thumb
+							file: movie.file
 						m.save();
-					@.trigger("refresh");
+					@.trigger "refresh"
+					callback() if callback?

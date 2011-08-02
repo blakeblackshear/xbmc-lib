@@ -1,27 +1,24 @@
 (function() {
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   namespace("xbmc.models", function(exports) {
-    exports.Movie = Spine.Model.setup("Movie", ["title", "year", "plot", "thumb", "file"]);
-    return exports.Movie.extend({
+    exports.TvShow = Spine.Model.setup("TvShow", ["title", "thumb", "fanart"]);
+    return exports.TvShow.extend({
       load: function(settings, callback) {
         var videoLibrary;
         this.deleteAll();
         videoLibrary = new xbmc.lib.VideoLibrary(settings);
-        return videoLibrary.getMovies({
-          fields: ["year", "genre"]
-        }, __bind(function(data) {
-          var m, movie, _i, _len, _ref;
-          _ref = data.movies;
+        return videoLibrary.getTvShows({}, __bind(function(data) {
+          var s, show, _i, _len, _ref;
+          _ref = data.tvshows;
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            movie = _ref[_i];
-            m = this.init({
-              id: movie.id,
-              title: movie.title,
-              year: movie.year,
-              thumb: movie.thumb,
-              file: movie.file
+            show = _ref[_i];
+            s = this.init({
+              id: show.tvshowid,
+              title: show.label,
+              thumb: show.thumbnail,
+              fanart: show.fanart
             });
-            m.save();
+            s.save();
           }
           this.trigger("refresh");
           if (callback != null) {
